@@ -1,0 +1,97 @@
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+    <link href='//fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+
+    <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css'>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style type="text/css">
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+        body {
+            background-image: url("white_blue.jpg");
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-family: 'Acme';
+            font-size: 33px;
+            line-height: 1em;
+        }
+        a { text-decoration: none; }
+        h1 { font-size: 1em;
+        color: blue}
+        h1, p {
+            margin-bottom: 10px;
+        }
+        strong {
+            font-weight: bold;
+        }
+        .uppercase { text-transform: uppercase; }
+
+        /* ---------- LOGIN ---------- */
+        #login {
+            margin: 50px auto;
+            width: 300px;
+        }
+        form fieldset input[type="text"], input[type="password"] {
+            background-color: #e5e5e5;
+            border: none;
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            color: #5a5656;
+            font-family: 'Acme';
+            font-size: 21px;
+            height: 50px;
+            outline: none;
+            padding: 0px 10px;
+            width: 280px;
+            -webkit-appearance:none;
+        }
+        form fieldset input[type="submit"] {
+            background-color: #008dde;
+            border: none;
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            color: #f4f4f4;
+            cursor: pointer;
+            font-family: 'Acme';
+            font-size: 20px;
+            height: 50px;
+            text-transform: uppercase;
+            width: 300px;
+            -webkit-appearance:none;
+        }
+    </style>
+    <script src="fb.js"></script>
+</head>
+<body>
+<div id="login">
+    <h1><strong><t>Login Page</strong></h1>
+    <form action="home_trial2.html" method="get">
+<fieldset>
+            <p><input type="text" required value="Username" onBlur="if(this.value=='')this.value='Username'" onFocus="if(this.value=='Username')this.value='' "></p>
+            <p><input type="password" required value="Password" onBlur="if(this.value=='')this.value='Password'" onFocus="if(this.value=='Password')this.value='' "></p>
+            <p><input type="submit" value="Login"></p>
+    <div class="social-buttons">
+       <p> <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" size="large" font-size='15px'>
+       </fb:login-button></p>
+
+        <a href="#" class="btn btn-tw" onclick="login()"><i class="fa fa-facebook"></i> Facebook</a>
+    </div>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
